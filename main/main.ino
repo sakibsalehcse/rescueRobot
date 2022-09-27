@@ -1,25 +1,26 @@
-
 void setup() {
+
   Serial.begin(9600);
+
 }
+
 void loop() {
-  if (Serial.available()> 0) {
 
+  
 
+  while (Serial.available() == 0) {}
 
+  String s = Serial.readString();
 
-    int a = Serial.parseInt();
+  s.trim();
 
-    Serial.print(a);
-    if (a == 1)
-
-    {
-
-      Serial.print("hello boss");
-
-    }
-
+  if (s == "backward")
+  {
+    backward();
   }
 
-
+  else if (s == "forward")
+  {
+    forward();
+  }
 }
