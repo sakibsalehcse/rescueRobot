@@ -1,6 +1,10 @@
 void forward()
 {
 
-  Serial.write("forward function called");
+  digitalWrite(13, HIGH);
+  digitalWrite(12, LOW);
+  digitalWrite(11, LOW);
+  digitalWrite(10, HIGH);
+
 
 }
